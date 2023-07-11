@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TopBurgers.Models.Lanche>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<style>
+    h1{
+        text-align: center;
+    }
+    .preco{
+        padding-top:10px;
+        font-weight:bold;
+    }
+
+    .descricaoLanche{
+
+       vertical-align: middle;
+    }
+
+</style>
+
+
+<h1>Todos os Lanches</h1>
+
+<table class="table">
+
+    @foreach (var lanche in Model)
+    {
+        <tr>
+            <td>
+                <div>
+                    <h4>@lanche.Nome</h4>
+                    <img src="@lanche.ImagemUrl">
+                    <p class="preco">Preço: @lanche.Preco.ToString("c")</p>
+                </div>
+            </td>
+
+            <td class="descricaoLanche">
+                <p>@lanche.DescricaoCurta</p>
+            </td>
+        </tr>
+    }
+
+</table>
