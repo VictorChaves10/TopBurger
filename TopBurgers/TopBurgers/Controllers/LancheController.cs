@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
+using System;
 using TopBurgers.Repositories.Interfaces;
+using TopBurgers.ViewModels;
 
 namespace TopBurgers.Controllers
 {
@@ -14,8 +17,14 @@ namespace TopBurgers.Controllers
 
         public IActionResult List()
         {
-            var lanches = _lancheRepository.Lanches;
-            return View(lanches);
+            //var lanches = _lancheRepository.Lanches;
+            //return View(lanches);
+
+            var lancheListViewModel = new LancheListViewModel();
+            lancheListViewModel.Lanches = _lancheRepository.Lanches;
+            lancheListViewModel.CategoriaAtual = "Categoria atual";
+
+            return View(lancheListViewModel);
         }
     }
 }

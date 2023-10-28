@@ -1,11 +1,24 @@
 ﻿
 
 
-<div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="~/images/carousel/1.png"/></div>
-        <div class="swiper-slide"><img src="~/images/carousel/2.png" /></div>
+<div class="swiper mySwiper col-xl-12">
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/carousel/1.png" class="d-block w-100" alt="Lanches">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/carousel/2.png" class="d-block w-100" alt="Horários">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+
 </div>
