@@ -1,4 +1,17 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿document.addEventListener('DOMContentLoaded', function () {
+    var flipCards = document.querySelectorAll('.flip-card-lanche');
 
-// Write your JavaScript code.
+    flipCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            var innerCard = this.querySelector('.flip-card-lanche-inner');
+
+            if (innerCard.style.transform === 'rotateY(180deg)') {
+            
+                innerCard.style.transform = 'rotateY(0deg)';
+            } else {
+                
+                innerCard.style.transform = 'rotateY(180deg)';
+            }
+        });
+    });
+});

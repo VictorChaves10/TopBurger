@@ -1,0 +1,30 @@
+﻿@model Pedido
+
+
+<h3>VocÊ está a um passo de completar o seu pedido!</h3>
+<hr />
+
+<form asp-action="Checkout" method="post" role="form" class="needs-validation">
+    <div class="row g-3">
+
+        <div class="col">
+            <input asp-for="Nome" type="text" class="form-control" placeholder="Nome" aria-label="Nome">
+
+            <input type="text" class="form-control" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+                <span asp-validation-for="Nome"></span>
+            </div>
+        </div>
+        <div class="col">
+
+            <input asp-for="Sobrenome" type="text" class="form-control" placeholder="Sobrenome" aria-label="Sobrenome" aria-describedby="inputGroupPrepend" required>
+
+            <div class="invalid-feedback">
+                <span asp-validation-for="Sobrenome"></span>
+            </div>
+
+        </div>
+
+
+    </div>
+</form>

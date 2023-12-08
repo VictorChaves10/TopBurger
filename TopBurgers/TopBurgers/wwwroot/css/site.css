@@ -1,19 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    font-family: 'Bebas Neue', sans-serif;
+}
 
+@media(max-width: 767px) {
+
+    .carrinho-compra-component {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .offcanvas-header h5{
+        margin:auto;
+    }
+}
+
+/* HEADER */
+
+
+.header-home {
+    margin-bottom: 4.5rem;
+}
+
+.lanhce-list-menu {
+    padding-bottom:7px;
+    padding-left: 0rem
+}
+
+
+/*CARRINHO COMPRA*/
+.carrinho-compra-component {
+    margin-right: 3rem;
+}
+
+.carrinho-compra-component img {
+    width:2.4rem;
+}
+
+.headerCarrinhoCompra {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0px;
+}
+
+    .headerCarrinhoCompra img {
+        margin-bottom: 2rem;
+    }
+
+
+    .headerCarrinhoCompra h1 {
+        margin: auto;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 4.7rem;
+        color: #B40000;
+    }
+
+.tableCarrinhoCompra {
+    margin-top: 3rem;
+}
+
+
+
+/*FLIP CARD LANCHE*/
+
+.card-lanche {
+    width: 12.6rem;
+    height: 14.3rem;
+    margin-bottom: 3.8rem;
+}
+
+.flip-card-lanche {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+
+.flip-card-lanche-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+.card-lanche-front, .card-lanche-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-lanche-front {
+    background-color: #bbb;
+    color: black;
+}
+
+    .card-lanche-front h4 {
+        position: absolute;
+        top: -0.3rem;
+        width: 100%;
+        padding: 0.3rem 0.1rem;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.5rem;
+        color: #ffffff;
+        background-color: #B40000;
+        border-radius: 0.5rem 0.5rem 0rem 0rem;
+    }
+
+.valorLanhce {
+    position: absolute;
+    bottom: 1rem;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 2.3rem;
+    padding-bottom: 0.3rem;
+    background-color: #FFA100;
+    border-radius: 8px;
+}
+
+    .valorLanhce h5 {
+        font-family: 'Bebas Neue', sans-serif;
+        color: #B40000;
+        font-size: 1.6rem;
+        padding-top: 1rem;
+    }
+
+.card-lanche-back {
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    padding: 0.9rem;
+    transform: rotateY(180deg);
+}
+
+
+
+
+/*    .flip-card-lanches-front span {
+        padding: 0.3rem 0.6rem;
+        bottom: -22px;
+        font-size: 1.2rem;
+        font-family: 'Bebas Neue', sans-serif;
+        color: #B40000;
+    }*/
+
+
+
+/*CONTATO */
+
+.contact {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleContact {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    padding: 2rem 3rem 4rem 0rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+    .titleContact h4 {
+        width: 20rem;
+        text-align: center;
+    }
+
+.allContacts {
+    width: 28rem;
+    height: 100%;
+    padding-left: 5rem;
+}
+
+    .allContacts h3 {
+        font-size: 1.4rem;
+    }
+
+.typeContact {
+    justify-content: space-between;
+}
+
+    .typeContact i {
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: #263E51;
+    }
+
+.fa-arrow-right:hover {
+    transform: scale(1.2);
 }

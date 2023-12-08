@@ -4,10 +4,10 @@
     ViewData["Title"] = "List";
 }
 
-<h1>@Model.CategoriaAtual</h1>
+<h1 class="text-center">@Model.CategoriaAtual</h1>
 
-<div class="container-xxl align-content-center">
-    <div class="row">
+<div class="container-xl">
+    <div class="row justify-content-center gap-1">
         @foreach (var lanche in Model.Lanches)
         {
             <partial name="_LancheResumo" for="@lanche"/>

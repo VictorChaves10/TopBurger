@@ -8,31 +8,54 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TopBurgers.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/7846910f0f.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <header class="header-home">
+
+        <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white border-bottom pt-3 box-shadow ">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Top Burgers</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TopBurger</a>
+
+                <button class="navbar-toggler d-lg-none d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Lanche" asp-action="List">Lanches</a>
-                        </li>
-                    </ul>
+
+                <div class="offcanvas offcanvas-end align-items-md-center" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">TopBurger</h5>
+                        <button type="button" class="btn-close btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body justify-content-md-start align-items-lg-start gap-5">
+                        <ul class="navbar-nav  justify-content-start align-items-md-end pe-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a>
+                            </li>
+                            <li class="nav-item dropdown">
+
+                                @await Component.InvokeAsync("CategoriaMenu")
+
+                            </li>
+                        </ul>
+                        <form class="d-flex teste" role="search" asp-controller="Lanche" asp-action="Search" method="get"  style="width:20rem;">
+                            <input class="form-control me-2" type="search" name="searchString" placeholder="Procurar produto" value="@ViewData["searchString"]">
+                            <button class="btn btn-primary d-md-none " type="submit">Pesquisar</button>
+                        </form>
+                        <div class="carrinho-compra-component">
+                            @await Component.InvokeAsync("CarrinhoCompraResumo")
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container-fluid m-0">
+    <div class="container-fluid ">
         <main role="main" class="m-0">
             @RenderBody()
 
@@ -47,7 +70,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
