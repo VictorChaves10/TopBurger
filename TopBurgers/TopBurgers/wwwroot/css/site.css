@@ -1,11 +1,13 @@
 @import url("variables.css");
 
 
-* {
+
+html {
     font-size: 14px;
     position: relative;
     min-height: 100%;
 }
+
 
 body {
 
