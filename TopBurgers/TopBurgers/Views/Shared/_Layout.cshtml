@@ -6,17 +6,21 @@
     <title>@ViewData["Title"] - TopBurgers</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/queries.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/variables.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TopBurgers.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+
     <script src="https://kit.fontawesome.com/7846910f0f.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
     <header class="header-home">
 
-        <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white border-bottom pt-3 box-shadow ">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TopBurger</a>
+        <nav class="navbar navbar-expand-md fixed-top  border-bottom pt-1 pb-1 box-shadow navbar-menu">
+            <div class="container-fluid align-items-md-end">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/Logo/logo.svg" width="50px"></a>
 
                 <button class="navbar-toggler d-lg-none d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -32,10 +36,10 @@
                     <div class="offcanvas-body justify-content-md-start align-items-lg-start gap-5">
                         <ul class="navbar-nav  justify-content-start align-items-md-end pe-1">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a>
+                                <a class="nav-link" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a>
                             </li>
                             <li class="nav-item dropdown">
 
@@ -43,19 +47,22 @@
 
                             </li>
                         </ul>
-                        <form class="d-flex teste" role="search" asp-controller="Lanche" asp-action="Search" method="get"  style="width:20rem;">
-                            <input class="form-control me-2" type="search" name="searchString" placeholder="Procurar produto" value="@ViewData["searchString"]">
+
+                        <form class="d-flex" role="search" asp-controller="Lanche" asp-action="Search" method="get" style="width:20rem;">
+                            <input class="form-control me-2" type="search" name="searchString" placeholder="Buscar produto" value="@ViewData["searchString"]">
                             <button class="btn btn-primary d-md-none " type="submit">Pesquisar</button>
                         </form>
+
                         <div class="carrinho-compra-component">
                             @await Component.InvokeAsync("CarrinhoCompraResumo")
                         </div>
+
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container-fluid ">
+    <div class="container-fluid mb-5 ">
         <main role="main" class="m-0">
             @RenderBody()
 
@@ -70,7 +77,6 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

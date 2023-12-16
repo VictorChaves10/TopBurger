@@ -77,7 +77,7 @@ namespace TopBurgers.Controllers
             return View("~/Views/Lanche/List.cshtml", new LancheListViewModel
             {
                 Lanches = lanches,
-                CategoriaAtual= categoriaAtual
+                CategoriaAtual = categoriaAtual
             });
 
         }

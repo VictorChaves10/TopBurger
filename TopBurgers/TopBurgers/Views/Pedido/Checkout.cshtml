@@ -1,30 +1,97 @@
 ﻿@model Pedido
 
 
-<h3>VocÊ está a um passo de completar o seu pedido!</h3>
-<hr />
 
-<form asp-action="Checkout" method="post" role="form" class="needs-validation">
-    <div class="row g-3">
+<section class="container-sm w-75 section-checkout">
 
-        <div class="col">
-            <input asp-for="Nome" type="text" class="form-control" placeholder="Nome" aria-label="Nome">
+    <header>
+        <h3 class="text-center">Você  está a um passo de completar o seu pedido!</h3>
+        <hr />
+    </header>
+    <form asp-action="Checkout" method="post" role="form" class="   needs-validation g-3" novalidate>
 
-            <input type="text" class="form-control" aria-describedby="inputGroupPrepend" required>
-            <div class="invalid-feedback">
-                <span asp-validation-for="Nome"></span>
+        <div class="row">
+
+            <div class="col">
+                <input asp-for="Nome" class="form-control" placeholder="Nome" required>
+                <div class="invalid-feedback">
+                   nome
+                </div>
+            </div>
+            <div class="col">
+                <input asp-for="Sobrenome" class="form-control" placeholder="Sobrenome" required>
+             
+                    <span class="invalid-feedback" asp-validation-for="Sobrenome"></span>
+                
+            </div>
+
+        </div>
+
+        <div class="row ">
+
+            <div class="col">
+                <input asp-for="Endereco" class="form-control" placeholder="Endereço" required>
+                <div class="invalid-feedback">
+                    <span asp-validation-for="Endereco"></span>
+                </div>
+            </div>
+            <div class="col">
+                <input asp-for="Complemento"  class="form-control" placeholder="Complemento" required>
+                <div class="invalid-feedback">
+                    <span asp-validation-for="Complemento"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+                <input asp-for="Cep"  class="form-control" placeholder="CEP"  required>
+                <div class="invalid-feedback">
+                    <span asp-validation-for="Cep"></span>
+                </div>
+            </div>
+            <div class="col">
+                <input asp-for="Cidade"  class="form-control" placeholder="Cidade" required>
+                <div class="invalid-feedback">
+                    <span asp-validation-for="Cidade"></span>
+                </div>
+            </div>
+            <div class="col">
+                <input asp-for="Estado" class="form-control" placeholder="Estado" required>
+                <div class="invalid-feedback">
+                    <span asp-validation-for="Estado"></span>
+                </div>
             </div>
         </div>
-        <div class="col">
 
-            <input asp-for="Sobrenome" type="text" class="form-control" placeholder="Sobrenome" aria-label="Sobrenome" aria-describedby="inputGroupPrepend" required>
+        <div class="row">
 
-            <div class="invalid-feedback">
-                <span asp-validation-for="Sobrenome"></span>
+            <div class="col">
+                <input asp-for="Telefone"  class="form-control" placeholder="Telefone"  required>
+                <div class="invalid-feedback">
+                    <span asp-validation-for="Telefone"></span>
+                </div>
+            </div>
+            <div class="col">
+                <input asp-for="Email" class="form-control" placeholder="Email" required>
+                <div class="invalid-feedback">
+                    <span asp-validation-for="Email"></span>
+                </div>
             </div>
 
         </div>
 
+        <div class="row col-6 mt-5 gap-1">
+            <div class="form-group col p-0">
+                <a class="btn btn-outline-info " asp-controller="CarrinhoCompra" asp-action="Index">Retornar ao carrinho</a>
+            </div>
+            <div class="col p-0">
+                <input class="btn btn-success " type="submit" value="Concluir pedido" />
+            </div>
+        </div>
 
-    </div>
-</form>
+    </form>
+</section>
+

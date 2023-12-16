@@ -1,53 +1,38 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+@import url("variables.css");
 
 
-
-html {
+* {
     font-size: 14px;
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-html {
     position: relative;
     min-height: 100%;
 }
 
 body {
-    margin-bottom: 60px;
-    font-family: 'Bebas Neue', sans-serif;
-}
 
-@media(max-width: 767px) {
-
-    .carrinho-compra-component {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-    }
-
-    .offcanvas-header h5{
-        margin:auto;
-    }
 }
 
 /* HEADER */
 
 
 .header-home {
+    
     margin-bottom: 4.5rem;
 }
 
 .lanhce-list-menu {
-    padding-bottom:7px;
+    padding-bottom: 7px;
     padding-left: 0rem
 }
+
+.navbar-menu {
+    background-color: #BA1A20;
+}
+
+    .navbar-menu a {
+        color: #F2B705;
+      
+    }
+
 
 
 /*CARRINHO COMPRA*/
@@ -55,9 +40,9 @@ body {
     margin-right: 3rem;
 }
 
-.carrinho-compra-component img {
-    width:2.4rem;
-}
+    .carrinho-compra-component img {
+        width: 2.4rem;
+    }
 
 .headerCarrinhoCompra {
     flex-wrap: wrap;
@@ -226,3 +211,17 @@ body {
 .fa-arrow-right:hover {
     transform: scale(1.2);
 }
+
+/*CHECKOUT*/
+
+.section-checkout{
+    
+
+    
+}
+
+
+.section-checkout input {
+    margin-bottom:1.5rem;
+}
+
