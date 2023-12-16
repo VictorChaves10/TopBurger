@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopBurgers", "TopBurgers\TopBurgers.csproj", "{D36E93F1-1C71-48F9-82DA-35DB31AB392F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopBurgers", "TopBurgers\TopBurgers.csproj", "{D36E93F1-1C71-48F9-82DA-35DB31AB392F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F02406D3-8B92-4B72-A0C4-89C5E547156E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

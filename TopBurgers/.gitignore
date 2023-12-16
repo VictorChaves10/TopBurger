@@ -1,0 +1,47 @@
+# Ignorar arquivos temporários e caches do Visual Studio
+.vscode/
+.vs/
+bin/
+obj/
+
+# Ignorar arquivos específicos do Visual Studio
+*.user
+*.suo
+*.userprefs
+*.log
+*.tmp
+
+# Ignorar arquivos de configuração do Rider
+.idea/
+
+# Ignorar arquivos específicos do Rider
+*.sln.iml
+*.iml
+
+# Ignorar arquivos específicos do Windows
+Thumbs.db
+Desktop.ini
+
+# Ignorar arquivos de compilação
+*.dll
+*.exe
+*.pdb
+
+# Ignorar arquivos de log e backup
+*.log
+*.bak
+*.cache
+
+# Ignorar arquivos de publicação
+publish/
+wwwroot/
+
+# Ignorar arquivos de configuração do projeto
+appsettings.json
+appsettings.Development.json
+
+# Ignorar diretórios de resultados de testes
+TestResults/
+
+# Ignorar diretório de arquivos temporários
+obj/
