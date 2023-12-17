@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="~/css/variables.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TopBurgers.styles.css" asp-append-version="true" />
 
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/7846910f0f.js" crossorigin="anonymous"></script>
 
@@ -18,50 +20,65 @@
 <body>
     <header class="header-home">
 
-        <nav class="navbar navbar-expand-md fixed-top  border-bottom pt-1 pb-1 box-shadow navbar-menu">
-            <div class="container-fluid align-items-md-end">
+        <nav class="navbar navbar-dark  navbar-expand-lg fixed-top navbar-menu">
+            <div class="container-fluid pe-4 ">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/Logo/logo.svg" width="50px"></a>
 
-                <button class="navbar-toggler d-lg-none d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
                 </button>
 
-                <div class="offcanvas offcanvas-end align-items-md-center" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-
+                <div class="offcanvas offcanvas-end  " tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">TopBurger</h5>
                         <button type="button" class="btn-close btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
 
-                    <div class="offcanvas-body justify-content-md-start align-items-lg-start gap-5">
-                        <ul class="navbar-nav  justify-content-start align-items-md-end pe-1">
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a>
-                            </li>
-                            <li class="nav-item dropdown">
+                    <div class="offcanvas-body justify-content-lg-center  align-items-lg-end">
+                        <div class="d-lg-flex me-3 ">
 
-                                @await Component.InvokeAsync("CategoriaMenu")
+                            <ul class="navbar-nav  align-items-md-end flex-grow-1 pe-3">
 
-                            </li>
-                        </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                </li>
+                                
 
-                        <form class="d-flex" role="search" asp-controller="Lanche" asp-action="Search" method="get" style="width:20rem;">
-                            <input class="form-control me-2" type="search" name="searchString" placeholder="Buscar produto" value="@ViewData["searchString"]">
-                            <button class="btn btn-primary d-md-none " type="submit">Pesquisar</button>
-                        </form>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="CarrinhoCompra" asp-action="Index">Carrinho</a>
+                                </li>
+
+
+                                <li class="">
+                                    @await Component.InvokeAsync("CategoriaMenu")
+                                </li>
+                            </ul>
+
+                            <form class="d-flex mt-3" role="search" asp-controller="Lanche" asp-action="Search" method="get">
+                                <input class="form-control me-2" type="search" name="searchString" placeholder="Buscar produto" value="@ViewData["searchString"]">
+                                <button class="btn btn-warning" type="submit">Buscar</button>
+                            </form>
+
+                        </div>
 
                         <div class="carrinho-compra-component">
                             @await Component.InvokeAsync("CarrinhoCompraResumo")
                         </div>
 
                     </div>
+
+
+
                 </div>
             </div>
         </nav>
     </header>
+
+
     <div class="container-fluid mb-5 ">
         <main role="main" class="m-0">
             @RenderBody()

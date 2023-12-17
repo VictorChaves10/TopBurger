@@ -8,9 +8,9 @@
 }
 
 
-/* BELLOW 767px (Tablets)*/
+/* BELLOW 991px (Tablets) */
 
-@media(max-width: 767px) {
+@media(max-width: 991px) {
 
     .carrinho-compra-component {
         position: absolute;
@@ -20,5 +20,17 @@
 
     .offcanvas-header h5 {
         margin: auto;
+        font-size: 1.7rem;
+        font-family: var(--hero-font);
+    }
+
+    .nav-item a, .lanhce-list-menu, .dropdown-menu-lanche a {
+        font-family: var(--default-font);
+        font-weight: 500;
+        color: var(--primary-color) !important;
+    }
+
+    .dropdown-menu-lanche {
+        background-color: #FFFFFF;
     }
 }

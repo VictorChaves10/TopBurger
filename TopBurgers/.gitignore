@@ -45,7 +45,3 @@ TestResults/
 
 # Ignorar diretório de arquivos temporários
 obj/
-
-# Ignorar arquivos SCSS
-
-css/queries.css

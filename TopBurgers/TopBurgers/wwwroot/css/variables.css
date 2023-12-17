@@ -1,11 +1,8 @@
 ﻿
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
-:root{
-
-    --default-font: font-family: 'Rubik', sans-serif;
-    --hero-font: font-family: 'Bebas Neue', sans-serif;
-
+:root {
+    --default-font: 'Rubik', sans-serif;
+    --hero-font: 'Bebas Neue', sans-serif;
+    --primary-color: #BA1A20;
 }
