@@ -17,12 +17,12 @@
                 <h5>@item.Lanche.Nome</h5>
             </div>
         }
-
     </div>
 
     <div class="container-sm">
 
         <table class="table table-responsive-sm tableCarrinhoCompra ">
+
             <thead>
                 <tr>
                     <th scope="col">Quantidade</th>
@@ -31,8 +31,11 @@
                     <th scope="col">Subtotal</th>
                     <th></th>
                 </tr>
+
             </thead>
+
             <tbody>
+
                 @foreach (var item in Model.CarrinhoCompra.CarrinhoCompraItems)
                 {
                     <tr>
@@ -47,13 +50,16 @@
                         </td>
                     </tr>
                 }
+
             </tbody>
+
             <tfoot>
                 <tr>
                     <td colspan="3"><strong>Total</strong></td>
                     <td>@Model.CarrinhoCompraTotal.ToString("c")</td>
                 </tr>
             </tfoot>
+
         </table>
         <div class="btn-group gap-2">
             <a class="btn btn-success" asp-controller="Pedido" asp-action="Checkout">Encerrar Pedido</a>
