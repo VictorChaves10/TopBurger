@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ya2a1712UIke4AavUu2F6OLPwLh1tPvFal6Di55ciSE=",
+  "Hash": "zCfkk0yN0LnY7i+4ODNGjH/sE3RKpLWVRAAXM0KCWOE=",
   "Source": "TopBurgers",
   "BasePath": "_content/TopBurgers",
   "Mode": "Default",
@@ -40297,12 +40297,12 @@
       "OriginalItemSpec": "wwwroot\\fontawesome-free-6.4.2-web\\webfonts\\fa-v4compatibility.woff2"
     },
     {
-      "Identity": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\carousel\\1.png",
+      "Identity": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\carousel\\1.svg",
       "SourceId": "TopBurgers",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\",
       "BasePath": "_content/TopBurgers",
-      "RelativePath": "images/carousel/1.png",
+      "RelativePath": "images/carousel/1.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -40313,15 +40313,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\carousel\\1.png"
+      "OriginalItemSpec": "wwwroot\\images\\carousel\\1.svg"
     },
     {
-      "Identity": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\carousel\\2.png",
+      "Identity": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\carousel\\2.svg",
       "SourceId": "TopBurgers",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\",
       "BasePath": "_content/TopBurgers",
-      "RelativePath": "images/carousel/2.png",
+      "RelativePath": "images/carousel/2.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -40332,7 +40332,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\carousel\\2.png"
+      "OriginalItemSpec": "wwwroot\\images\\carousel\\2.svg"
+    },
+    {
+      "Identity": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\carousel\\3.svg",
+      "SourceId": "TopBurgers",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\",
+      "BasePath": "_content/TopBurgers",
+      "RelativePath": "images/carousel/3.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\carousel\\3.svg"
     },
     {
       "Identity": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\contact\\contact.svg",
