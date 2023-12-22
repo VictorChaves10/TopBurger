@@ -2,7 +2,12 @@
 
 
 :root {
+    /*FONTS*/
+
     --default-font: 'Rubik', sans-serif;
     --hero-font: 'Bebas Neue', sans-serif;
+    /*COLORS*/
+
     --primary-color: #BA1A20;
+    --second-color: #ED9F0E;
 }

@@ -46,15 +46,35 @@ body {
     }
 
 
+
 /*CARROUSEL HERO*/
 
 
-.hero{
-    
+.hero {
     padding-left: 0rem;
     padding-right: 0px;
 }
 
+
+/*LANHCES FAVORITOS*/
+
+.favorites{
+    margin-top: 2rem;
+}
+
+.favorites-title{
+
+    padding: 0.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.favorites-title h2 {
+    font-family: var(--hero-font);
+    font-size: 3.5rem;
+    color: var(--second-color);
+    margin:0px;
+
+}
 
 
 /*CARRINHO COMPRA*/
@@ -130,7 +150,7 @@ body {
 
     .card-lanche-front h4 {
         position: absolute;
-        top: -0.3rem;
+        top: -3px;
         width: 100%;
         padding: 0.3rem 0.1rem;
         font-family: 'Bebas Neue', sans-serif;
