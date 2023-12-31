@@ -12,6 +12,13 @@ body {
     margin-bottom: 60px;
 }
 
+h2 {
+    font-family: var(--hero-font);
+    font-size: 3.5rem;
+    color: var(--second-color);
+    margin: 0px;
+}
+
 
 /* HEADER */
 
@@ -56,24 +63,35 @@ body {
 }
 
 
+
 /*LANHCES FAVORITOS*/
 
-.favorites{
+.favorites {
     margin-top: 2rem;
 }
 
-.favorites-title{
-
+.favorites-title {
     padding: 0.5rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
+    align-items: flex-end;
+    justify-content: center;
 }
 
-.favorites-title h2 {
-    font-family: var(--hero-font);
-    font-size: 3.5rem;
-    color: var(--second-color);
-    margin:0px;
+    .favorites-title img {
+        width: 100px;
+    }
 
+
+.lanches-favoritos {
+    margin-bottom: 4rem;
+}
+
+.favorites aside {
+    position: relative;
+}
+
+.favorites-footer {
+    margin-top: 2rem;
 }
 
 
@@ -112,7 +130,7 @@ body {
 .card-lanche {
     width: 12.6rem;
     height: 14.3rem;
-    margin-bottom: 3.8rem;
+    margin-bottom: 3.9rem;
 }
 
 .flip-card-lanche {
@@ -150,14 +168,14 @@ body {
 
     .card-lanche-front h4 {
         position: absolute;
-        top: -3px;
+        top: 0px;
         width: 100%;
         padding: 0.3rem 0.1rem;
         font-family: 'Bebas Neue', sans-serif;
         font-size: 1.5rem;
         color: #ffffff;
         background-color: #B40000;
-        border-radius: 0.5rem 0.5rem 0rem 0rem;
+      
     }
 
 .valorLanhce {
@@ -177,32 +195,62 @@ body {
     .valorLanhce h5 {
         font-family: 'Bebas Neue', sans-serif;
         color: #B40000;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         padding-top: 1rem;
     }
 
+
 .card-lanche-back {
-    background-color: dodgerblue;
-    color: white;
+    background-color: var(--primary-color);
     text-align: center;
-    padding: 0.9rem;
+    padding: 0.5rem;
     transform: rotateY(180deg);
 }
 
 
+.card-lanche-back h5 {
+    color: var(--second-color);
+    font-family: var(--hero-font);
+}
+
+    .card-lanche-back p {
+        text-align: inherit;
+        padding: 1rem 0.5rem 0rem 0.5rem;
+        font-size: 0.8rem;
+        color: white;
+    }
 
 
-/*    .flip-card-lanches-front span {
-        padding: 0.3rem 0.6rem;
-        bottom: -22px;
-        font-size: 1.2rem;
-        font-family: 'Bebas Neue', sans-serif;
-        color: #B40000;
-    }*/
 
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fffF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.content h5{
+    font-size: 1rem;
+    font-family: var(--default-font);
+}
+
+
+.card-lanche-front:hover .content {
+    opacity: 1;
+}
 
 
 /*CONTATO */
+
 
 .contact {
     margin: auto;
@@ -258,3 +306,11 @@ body {
     .section-checkout input {
         margin-bottom: 1.5rem;
     }
+
+/*    .flip-card-lanches-front span {
+        padding: 0.3rem 0.6rem;
+        bottom: -22px;
+        font-size: 1.2rem;
+        font-family: 'Bebas Neue', sans-serif;
+        color: #B40000;
+    }*/

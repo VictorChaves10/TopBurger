@@ -8505,6 +8505,10 @@
       "PackagePath": "staticwebassets\\images\\Produtos\\LanchesArtesanais\\Salada_Crunch.svg"
     },
     {
+      "Id": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\Produtos\\LanchesArtesanais\\background-card-lanches.png",
+      "PackagePath": "staticwebassets\\images\\Produtos\\LanchesArtesanais\\background-card-lanches.png"
+    },
+    {
       "Id": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\ThumbNails\\LanchesArtesanais\\Thumb_Cheddarburger.png",
       "PackagePath": "staticwebassets\\images\\ThumbNails\\LanchesArtesanais\\Thumb_Cheddarburger.png"
     },
@@ -8543,6 +8547,18 @@
     {
       "Id": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\contact\\contact.svg",
       "PackagePath": "staticwebassets\\images\\contact\\contact.svg"
+    },
+    {
+      "Id": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\favorites\\emoji-stars.svg",
+      "PackagePath": "staticwebassets\\images\\favorites\\emoji-stars.svg"
+    },
+    {
+      "Id": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\favorites\\favorites-background.svg",
+      "PackagePath": "staticwebassets\\images\\favorites\\favorites-background.svg"
+    },
+    {
+      "Id": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\favorites\\favorites-stars.svg",
+      "PackagePath": "staticwebassets\\images\\favorites\\favorites-stars.svg"
     },
     {
       "Id": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\icons\\fale-conosco.svg",

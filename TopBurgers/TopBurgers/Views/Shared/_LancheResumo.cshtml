@@ -2,21 +2,24 @@
 
 
 <div class="card-lanche">
-<div class="flip-card-lanche">
-    <div class="flip-card-lanche-inner" id="card-@Model.LancheId">
-        <div class="card-lanche-front">
-            <img src="@Model.ImagemUrl" alt="Avatar" width="100%">
-            <h4>@Model.Nome</h4>
-            <div class="valorLanhce">
-                <h5>@Model.Preco.ToString("c")</h5>
+    <div class="flip-card-lanche">
+        <div class="flip-card-lanche-inner" id="card-@Model.LancheId">
+            <div class="card-lanche-front">
+                <img src="@Model.ImagemUrl" alt="Avatar" width="100%">
+                <h4>@Model.Nome</h4>
+                <div class="valorLanhce">
+                    <h5>@Model.Preco.ToString("c")</h5>
+                </div>
+                <div class="content">
+                    <h5>Ver ingredientes</h5>
+                </div>
+            </div>
+            <div class="card-lanche-back">
+                <h5>Ingredientes</h5>
+                <p>@Model.DescricaoDetalhada</p>
             </div>
         </div>
-        <div class="card-lanche-back">
-            <h2>Ingredientes</h2>
-            <p>@Model.DescricaoDetalhada</p>
-        </div>
     </div>
-</div>
-<a asp-controller="CarrinhoCompra" asp-action="AdicionarItemNoCarrinhoCompra" asp-route-LancheID="@Model.LancheId" class="btn btn-primary w-100">Adicionar ao carrinho</a>
+    <a asp-controller="CarrinhoCompra" asp-action="AdicionarItemNoCarrinhoCompra" asp-route-LancheID="@Model.LancheId" class="btn btn-warning w-100">Adicionar ao carrinho</a>
 </div>
 
