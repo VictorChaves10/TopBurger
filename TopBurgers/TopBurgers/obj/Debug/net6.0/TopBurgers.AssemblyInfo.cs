@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TopBurgers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fec9063920cd2b1a76700571e31e5d4dfd2b1851")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8544a96aeba283deaa2221348c005ecb2f2a2b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("TopBurgers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TopBurgers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
