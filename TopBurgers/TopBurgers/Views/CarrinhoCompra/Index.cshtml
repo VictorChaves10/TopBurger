@@ -1,22 +1,24 @@
 ﻿@model CarrinhoCompraViewModel
 
-<div class="container">
+<section class="container">
 
-    <div class="d-flex headerCarrinhoCompra">
-        <img src="~/images/icons/sacolinha-compra.png" width="80px" alt="sacolinha lanche" />
-        <h1 class="title-carrinhoCompra">Carrinho de Compra</h1>
-    </div>
+    <header class="header-carrinho-compra gap-4">
+        <img src="~/images/icons/sacolinha-compra.png" width="70px" alt="sacolinha lanche" />
+        <h1>Carrinho de Compra</h1>
+    </header>
 
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 gap-5 justify-content-center ">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 gap-5 justify-content-center">
+
         @foreach (var item in Model.CarrinhoCompra.CarrinhoCompraItems)
         {
-            <div class="card p-0 shadow-lg cardsItensCarrinho" style="width: 12rem;">
+            <div class="card shadow-lg card-item-lanche-carrinho">
                 <img src="@item.Lanche.ImagemUrl" alt="Cheddarburger">
-                <span class="position-absolute shadow-lg start-100 translate-middle badge bg-warning">@item.Quantidade x</span>
-                <h5>@item.Lanche.Nome</h5>
+                <span class="badge-quantidade position-absolute translate-middle badge">@item.Quantidade x</span>
+                <h4>@item.Lanche.Nome</h4>
             </div>
         }
+
     </div>
 
     <div class="container-sm">
@@ -41,8 +43,8 @@
                     <tr>
                         <th scope="row">@item.Quantidade</th>
                         <td>@item.Lanche.Nome</td>
-                        <td>R$ @item.Lanche.Preco.ToString("c")</td>
-                        <td>R$ @((item.Quantidade * item.Lanche.Preco).ToString("c"))</td>
+                        <td>@item.Lanche.Preco.ToString("c")</td>
+                        <td>@((item.Quantidade * item.Lanche.Preco).ToString("c"))</td>
                         <td>
                             <a asp-controller="CarrinhoCompra" asp-action="RemoverItemCarrinho" asp-route-lancheId="@item.Lanche.LancheId">
                                 <img src="~/images/icons/trash.png"/>
@@ -56,7 +58,7 @@
             <tfoot>
                 <tr>
                     <td colspan="3"><strong>Total</strong></td>
-                    <td>@Model.CarrinhoCompraTotal.ToString("c")</td>
+                    <td><strong>@Model.CarrinhoCompraTotal.ToString("c")</strong></td>
                 </tr>
             </tfoot>
 
@@ -68,4 +70,4 @@
     </div>
 
 
-</div>
+</section>

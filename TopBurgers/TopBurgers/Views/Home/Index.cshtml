@@ -5,9 +5,13 @@
 
 <section class="favorites container-fluid pe-1 ps-1">
 
-    <div class="favorites-title d-flex gap-5">
+    <div class="favorites-title d-flex gap-4">
         <h2 class="text-center">Os Favoritos</h2>
-        <img src="~/images/favorites/emoji-stars.svg"/>
+        <picture>
+            <source media="(max-width:991px)" srcset="images/favorites/emoji-star-sm.svg">
+             <img src="~/images/favorites/emoji-star.svg"/>
+        </picture>
+       
     </div>
 
     <div class="lanches-favoritos row row-cols-1 row-cols-sm-2 row-cols-md-4 gap-5 justify-content-center">
@@ -21,7 +25,7 @@
 
     <aside class="container-fluid p-0 mt-3 ">
 
-        <div class="">
+        <div>
             <img src="~/images/favorites/favorites-background.svg" width="100%"/>
         </div>
 

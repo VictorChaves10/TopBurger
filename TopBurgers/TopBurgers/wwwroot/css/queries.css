@@ -12,6 +12,14 @@
 
 @media(max-width: 991px) {
 
+    h1{
+        font-size: 3rem;
+    }
+
+    h2{ 
+        font-size:2.5rem;
+    }
+
     .carrinho-compra-component {
         position: absolute;
         top: 1rem;

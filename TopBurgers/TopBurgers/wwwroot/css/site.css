@@ -12,9 +12,16 @@ body {
     margin-bottom: 60px;
 }
 
-h2 {
+h1 {
     font-family: var(--hero-font);
     font-size: 3.5rem;
+    color: var(--primary-color);
+    margin: 0px;
+}
+
+h2 {
+    font-family: var(--hero-font);
+    font-size: 3rem;
     color: var(--second-color);
     margin: 0px;
 }
@@ -25,7 +32,7 @@ h2 {
 
 .lanhce-list-menu {
     padding-bottom: 7px;
-    padding-left: 0rem
+    padding-left: 0rem;
 }
 
 .navbar-menu {
@@ -43,6 +50,7 @@ h2 {
     background-color: var(--primary-color);
 }
 
+
 .carrinho-compra-component {
     position: absolute;
     right: 2rem;
@@ -53,7 +61,6 @@ h2 {
     }
 
 
-
 /*CARROUSEL HERO*/
 
 
@@ -61,7 +68,6 @@ h2 {
     padding-left: 0rem;
     padding-right: 0px;
 }
-
 
 
 /*LANHCES FAVORITOS*/
@@ -77,11 +83,6 @@ h2 {
     justify-content: center;
 }
 
-    .favorites-title img {
-        width: 100px;
-    }
-
-
 .lanches-favoritos {
     margin-bottom: 4rem;
 }
@@ -95,29 +96,47 @@ h2 {
 }
 
 
+
 /*CARRINHO COMPRA*/
 
 
-.headerCarrinhoCompra {
-    flex-wrap: wrap;
+.header-carrinho-compra {
+    display: flex;
     flex-direction: row;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    padding: 0px;
+    justify-content: center;
+    align-items: baseline;
+    margin: 3rem 0rem;
 }
 
-    .headerCarrinhoCompra img {
-        margin-bottom: 2rem;
-    }
+.card-item-lanche-carrinho {
+    width: 12.6rem;
+    height: 14.3rem;
+    padding: 0px;
+    margin-bottom: 1rem;
+}
 
-
-    .headerCarrinhoCompra h1 {
-        margin: auto;
+    .card-item-lanche-carrinho h4 {
+        bottom: -32px;
+        position: absolute;
+        width: 100%;
+        margin: 0px;
+        padding: 0.5rem;
+        text-align: center;
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 4.7rem;
-        color: #B40000;
+        font-size: 1.5rem;
+        color: #ffffff;
+        background-color: var(--primary-color);
     }
 
+.badge-quantidade {
+    top: 5px;
+    right: -35px;
+    padding: 0.8rem;
+    border-radius: 20px;
+    letter-spacing: -2px;
+    font-size: 1rem;
+    background-color: var(--second-color);
+}
 
 .tableCarrinhoCompra {
     margin-top: 3rem;
@@ -175,7 +194,6 @@ h2 {
         font-size: 1.5rem;
         color: #ffffff;
         background-color: #B40000;
-      
     }
 
 .valorLanhce {
@@ -208,10 +226,10 @@ h2 {
 }
 
 
-.card-lanche-back h5 {
-    color: var(--second-color);
-    font-family: var(--hero-font);
-}
+    .card-lanche-back h5 {
+        color: var(--second-color);
+        font-family: var(--hero-font);
+    }
 
     .card-lanche-back p {
         text-align: inherit;
@@ -238,11 +256,14 @@ h2 {
     transition: opacity 0.3s ease-in-out;
 }
 
-.content h5{
-    font-size: 1rem;
-    font-family: var(--default-font);
-}
+    .content h5 {
+        font-size: 1rem;
+        font-family: var(--default-font);
+    }
 
+    .content i {
+        font-size: 1.6rem;
+    }
 
 .card-lanche-front:hover .content {
     opacity: 1;
@@ -299,18 +320,6 @@ h2 {
 
 /*CHECKOUT*/
 
-.section-checkout {
+.section-checkout input {
+    margin-bottom: 1.5rem;
 }
-
-
-    .section-checkout input {
-        margin-bottom: 1.5rem;
-    }
-
-/*    .flip-card-lanches-front span {
-        padding: 0.3rem 0.6rem;
-        bottom: -22px;
-        font-size: 1.2rem;
-        font-family: 'Bebas Neue', sans-serif;
-        color: #B40000;
-    }*/
