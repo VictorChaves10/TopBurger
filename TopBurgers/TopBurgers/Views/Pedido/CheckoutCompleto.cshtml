@@ -1,0 +1,55 @@
+﻿@model Pedido
+
+
+<section class=" checkout-completo m-sm-auto">
+    <header class="h-100 p-5 bg-body-tertiary border rounded-3 mt-3 mb-3 header-checkout-completo">
+        <h2>@ViewBag.CheckoutCompleto</h2>
+        <p>Agora temos um compromisso com sua fome, deixe com a gente!</p>
+
+        <button type="button" class="btn btn-primary btn-sm">Nos avalie no Google  <i class="fa-brands fa-google"></i> </button>
+    </header>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Cliente:&ensp;<span>@Model.Nome</span> &emsp;&emsp;&emsp;&emsp;&emsp; Número de pedido:&ensp;<span>@Model.PedidoId</span>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Data do pedido: @Model.PedidoEnviado</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3 mb-1 p-2">
+        <table class="table">
+            <tr>
+                <th></th>
+                <th>Quantidade</th>
+                <th>Lanche</th>
+                <th>Preço</th>
+            </tr>
+            @foreach (var item in Model.PedidosItens)
+            {
+                <tr>
+                    <td><img src="@item.Lanche.ImagemThumbnailUrl" width="40" height="40" /></td>
+                    <td>@item.Quantidade</td>
+                    <td>@item.Lanche.Nome</td>
+                    <td>@item.Lanche.Preco</td>
+                </tr>
+            }
+        </table>
+        <div class="d-flex justify-content-between">
+            <h5>Total</h5>
+            <p><strong>@(((decimal)ViewBag.TotalPedido).ToString("C2"))</strong></p>
+        </div>
+    </div>
+    <div class="form-group text-center">
+       
+            <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Retornar</a>
+    </div>
+
+</section>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/FptrUlrctokdMvkBLZ5woCFmMhIcDeyQNFqsmpXPZc=",
+  "Hash": "4imZaex2ihoEYvMBd5T9tuq7CrOI9Ie4bQTYBNPE5to=",
   "Source": "TopBurgers",
   "BasePath": "_content/TopBurgers",
   "Mode": "Default",
@@ -40447,6 +40447,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\icons\\fale-conosco.svg"
+    },
+    {
+      "Identity": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\icons\\motoboy-vermelho.svg",
+      "SourceId": "TopBurgers",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\",
+      "BasePath": "_content/TopBurgers",
+      "RelativePath": "images/icons/motoboy-vermelho.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\icons\\motoboy-vermelho.svg"
     },
     {
       "Identity": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\icons\\sacolinha-compra.png",

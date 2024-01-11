@@ -323,3 +323,24 @@ h2 {
 .section-checkout input {
     margin-bottom: 1.5rem;
 }
+
+/*CHECKOUT COMPLETO*/
+
+.checkout-completo {
+    width: 45rem;
+}
+
+.header-checkout-completo{
+    background-image: url(../images/icons/motoboy-vermelho.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-x: 520px
+}
+
+.accordion span {
+    color: var(--primary-color);
+}
+
+.checkout-completo-data-pedido {
+    text-align: right;
+}

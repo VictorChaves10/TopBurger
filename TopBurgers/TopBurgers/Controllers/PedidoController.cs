@@ -30,7 +30,7 @@ namespace TopBurgers.Controllers
             List<CarrinhoCompraItem> items = _carrinhoCompra.GetCarrinhoCompraItems();
             _carrinhoCompra.CarrinhoCompraItems = items;
 
-            if (_carrinhoCompra.CarrinhoCompraItems.Count > 0)
+            if (_carrinhoCompra.CarrinhoCompraItems.Count == 0)
             {
 
                 ModelState.AddModelError("", "Seu carrinho está vazio");
@@ -50,7 +50,7 @@ namespace TopBurgers.Controllers
             {
                 _pedidoRepository.CriarPedido(pedido);
 
-                ViewBag.CheckoutCompleto = "Obrigado pelo seu pedido";
+                ViewBag.CheckoutCompleto = "Seu pedido foi concluído!";
                 ViewBag.TotalPedido = _carrinhoCompra.GetCarrinhoCompraTotal();
 
                 _carrinhoCompra.LimparCarrinho();
