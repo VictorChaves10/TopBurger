@@ -8477,6 +8477,10 @@
       "PackagePath": "staticwebassets\\fontawesome-free-6.4.2-web\\webfonts\\fa-v4compatibility.woff2"
     },
     {
+      "Id": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\Login\\login.svg",
+      "PackagePath": "staticwebassets\\images\\Login\\login.svg"
+    },
+    {
       "Id": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\Logo\\logo.svg",
       "PackagePath": "staticwebassets\\images\\Logo\\logo.svg"
     },

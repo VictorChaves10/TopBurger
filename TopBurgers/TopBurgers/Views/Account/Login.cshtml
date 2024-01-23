@@ -1,20 +1,52 @@
 ﻿@model LoginViewModel
 
 
-<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+<section class="container py-4">
 
-    <div class="container-fluid py-5">
-        <div>
+    <div class="row align-items-md-stretch m-5">
+        <div class="col-md-6">
+            <div class="h-100 p-4 rounded-">
+                <img src="~/images/Login/login.svg" width="100%" />
 
-        <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-        <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-        <button class="btn btn-primary btn-lg" type="button">Example button</button>
+            </div>
         </div>
-        <div>
-            <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-            <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-            <button class="btn btn-primary btn-lg" type="button">Example button</button>
+        <div class="col-md-6 ">
+            <div class="h-100 p-2 bg-body-tertiary border rounded-3">
+
+                <h2 class="text-center">Login</h2>
+
+                <form asp-controller="Account" asp-action="Login" method="post" class="login mt-5">
+
+                   
+                    <input type="hidden" asp-for="ReturnUrl"/>
+
+                    <div class="row mb-3 ps-5">
+                        <label asp-for="UserName" class="col-sm-2 col-form-label"><i class="fa-solid fa-user"></i></label>
+                        <div class="col-sm-10 ps-0">
+                            <input type="email" placeholder="Usuário" class="form-control" asp-for="UserName">
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="row mb-3 ps-5">
+                        <label asp-for="Password"  class="col-sm-2 col-form-label"><i class="fa-solid fa-lock"></i></label>
+                        <div class="col-sm-10 ps-0">
+                            <input type="password" placeholder="Senha" class="form-control" asp-for="Password">
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                       
+                    </div>
+
+                    <div class="d-grid  mx-auto p-5">
+                        <button class="btn btn-danger" type="submit">Entrar</button>
+                    </div>
+                    
+                </form>
+               
+            </div>
+
         </div>
     </div>
 
-</div>
+</section>

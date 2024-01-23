@@ -344,3 +344,16 @@ h2 {
 .checkout-completo-data-pedido {
     text-align: right;
 }
+
+
+/*LOGIN*/
+
+
+.login label{
+    width: 48px;
+}
+
+.login i{
+    font-size: 20px;
+    color: var(--primary-color);
+}
