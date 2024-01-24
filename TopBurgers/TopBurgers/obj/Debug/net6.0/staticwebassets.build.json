@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l42L0Lmw3TEnyLupdts08Il+di5mwEmercCK3/an/9s=",
+  "Hash": "Mmqbe62WdGiiPWvxTsjzdYIBp4ncMg9f+qYQXOFkZ2E=",
   "Source": "TopBurgers",
   "BasePath": "_content/TopBurgers",
   "Mode": "Default",
@@ -40504,6 +40504,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\icons\\trash.png"
+    },
+    {
+      "Identity": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\Login\\cadastrar-cliente.svg",
+      "SourceId": "TopBurgers",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\",
+      "BasePath": "_content/TopBurgers",
+      "RelativePath": "images/Login/cadastrar-cliente.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Login\\cadastrar-cliente.svg"
     },
     {
       "Identity": "C:\\Users\\a867900\\Documents\\GitHub\\Curso_ASP_.NET_Core_MVC\\TopBurgers\\TopBurgers\\wwwroot\\images\\Login\\login.svg",

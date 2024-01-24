@@ -28,24 +28,23 @@ namespace TopBurgers.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginVm)
         {
-            if(!ModelState.IsValid)
-            {
+            if (!ModelState.IsValid)
                 return View(loginVm);
-            }
+
 
             var user = await _userManager.FindByNameAsync(loginVm.UserName);
 
-            if (user == null)
+            if (user != null)
             {
                 var result = await _signInManager.PasswordSignInAsync(user, loginVm.Password, false, false);
 
                 if (result.Succeeded)
                 {
-                    if(string.IsNullOrEmpty(loginVm.ReturnUrl))
+                    if (string.IsNullOrEmpty(loginVm.ReturnUrl))
                     {
                         return RedirectToAction("Index", "Home");
                     }
-                    
+
                     return Redirect(loginVm.ReturnUrl);
                 }
             }
@@ -54,6 +53,33 @@ namespace TopBurgers.Controllers
 
             return View(loginVm);
 
+        }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(LoginViewModel registroVM)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new IdentityUser { UserName = registroVM.UserName };
+                var result = await _userManager.CreateAsync(user, registroVM.Password);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Login", "Account");
+                }
+                else
+                {
+                    this.ModelState.AddModelError("Registro", "Falha ao registrar o usuário");
+                }
+
+            }
+
+            return View(registroVM);
         }
     }
 }
