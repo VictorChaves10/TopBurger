@@ -357,3 +357,11 @@ h2 {
     font-size: 20px;
     color: var(--primary-color);
 }
+
+
+/*PARTIAL VIEW LOGOUT*/
+
+.logout i {
+    font-size:32px;
+    color:var(--second-color);
+}

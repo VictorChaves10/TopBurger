@@ -1,47 +1,102 @@
-# Ignorar arquivos temporários e caches do Visual Studio
+# Ignorar arquivos temporários e caches do Visual Studio e .NET
 .vscode/
 .vs/
 bin/
 obj/
-
-# Ignorar arquivos específicos do Visual Studio
 *.user
 *.suo
 *.userprefs
 *.log
 *.tmp
-
-# Ignorar arquivos de configuração do Rider
-.idea/
-
-# Ignorar arquivos específicos do Rider
-*.sln.iml
-*.iml
-
-# Ignorar arquivos específicos do Windows
-Thumbs.db
-Desktop.ini
-
-# Ignorar arquivos de compilação
 *.dll
 *.exe
 *.pdb
-
-# Ignorar arquivos de log e backup
-*.log
-*.bak
-*.cache
-
-# Ignorar arquivos de publicação
+*.dll
+*.exe
+*.pdb
+*.sln.iml
+*.iml
+Thumbs.db
+Desktop.ini
 publish/
 wwwroot/
-
-# Ignorar arquivos de configuração do projeto
 appsettings.json
 appsettings.Development.json
-
-# Ignorar diretórios de resultados de testes
 TestResults/
-
-# Ignorar diretório de arquivos temporários
 obj/
+*.csproj.user
+*.csproj.dotSettings.user
+*.dbmdl
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+*.iml
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk

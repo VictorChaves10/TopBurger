@@ -47,7 +47,7 @@
                         <td>@((item.Quantidade * item.Lanche.Preco).ToString("c"))</td>
                         <td>
                             <a asp-controller="CarrinhoCompra" asp-action="RemoverItemCarrinho" asp-route-lancheId="@item.Lanche.LancheId">
-                                <img src="~/images/icons/trash.png"/>
+                                <img src="~/images/icons/trash.png" />
                             </a>
                         </td>
                     </tr>
@@ -64,7 +64,15 @@
 
         </table>
         <div class="btn-group gap-2">
-            <a class="btn btn-success" asp-controller="Pedido" asp-action="Checkout">Encerrar Pedido</a>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a class="btn btn-success" asp-controller="Pedido" asp-action="Checkout">Encerrar Pedido</a>
+            }
+            else
+            {
+                <a class="btn btn-success" asp-controller="Account" asp-action="Login">Encerrar Pedido</a>
+            }
+
             <a class="btn btn-primary" asp-controller="Lanche" asp-action="List">Continuar Comprando</a>
         </div>
     </div>

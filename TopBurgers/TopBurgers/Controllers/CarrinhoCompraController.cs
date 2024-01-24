@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using TopBurgers.Models;
 using TopBurgers.Repositories.Interfaces;
@@ -31,21 +32,22 @@ namespace TopBurgers.Controllers
             return View(carrinhoCompraVM);
         }
 
-        public IActionResult AdicionarItemNoCarrinhoCompra(int lancheID) 
+        [Authorize]
+        public IActionResult AdicionarItemNoCarrinhoCompra(int lancheID)
         {
-        
-            var lancheSelecionado = _lancheRepository.Lanches.FirstOrDefault(l => l.LancheId == lancheID );
+            var lancheSelecionado = _lancheRepository.Lanches.FirstOrDefault(l => l.LancheId == lancheID);
 
-            if(lancheSelecionado != null)
+            if (lancheSelecionado != null)
             {
                 _carrinhoCompra.AdicionarAoCarrinho(lancheSelecionado);
 
 
-            }           
+            }
             return RedirectToAction("Index");
-        
+
         }
 
+        [Authorize]
         public IActionResult RemoverItemCarrinho(int lancheId)
         {
             var lancheSelecionado = _lancheRepository.Lanches.FirstOrDefault(l => l.LancheId == lancheId);
