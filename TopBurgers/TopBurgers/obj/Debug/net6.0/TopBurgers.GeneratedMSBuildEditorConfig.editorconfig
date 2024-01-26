@@ -18,6 +18,46 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\a867900\Documents\GitHub\Curso_ASP_.NET_Core_MVC\TopBurgers\TopBurgers
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/a867900/Documents/GitHub/Curso_ASP_.NET_Core_MVC/TopBurgers/TopBurgers/Areas/admin/Views/AdminCategorias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/a867900/Documents/GitHub/Curso_ASP_.NET_Core_MVC/TopBurgers/TopBurgers/Areas/admin/Views/AdminCategorias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/a867900/Documents/GitHub/Curso_ASP_.NET_Core_MVC/TopBurgers/TopBurgers/Areas/admin/Views/AdminCategorias/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/a867900/Documents/GitHub/Curso_ASP_.NET_Core_MVC/TopBurgers/TopBurgers/Areas/admin/Views/AdminCategorias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/a867900/Documents/GitHub/Curso_ASP_.NET_Core_MVC/TopBurgers/TopBurgers/Areas/admin/Views/AdminCategorias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/a867900/Documents/GitHub/Curso_ASP_.NET_Core_MVC/TopBurgers/TopBurgers/Areas/admin/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/a867900/Documents/GitHub/Curso_ASP_.NET_Core_MVC/TopBurgers/TopBurgers/Areas/admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/a867900/Documents/GitHub/Curso_ASP_.NET_Core_MVC/TopBurgers/TopBurgers/Areas/admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/a867900/Documents/GitHub/Curso_ASP_.NET_Core_MVC/TopBurgers/TopBurgers/Areas/admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/a867900/Documents/GitHub/Curso_ASP_.NET_Core_MVC/TopBurgers/TopBurgers/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/a867900/Documents/GitHub/Curso_ASP_.NET_Core_MVC/TopBurgers/TopBurgers/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

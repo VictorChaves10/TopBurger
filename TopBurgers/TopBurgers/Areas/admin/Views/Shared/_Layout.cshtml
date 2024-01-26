@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TopBurgers</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/queries.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/variables.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TopBurgers.styles.css" asp-append-version="true" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/7846910f0f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="header-home">
+
+        <nav class="navbar navbar-dark  navbar-expand-lg  navbar-menu">
+            <div class="container-fluid pe-4 ">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/Logo/logo.svg" width="50px"></a>
+
+                <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+                </button>
+
+                <div class="offcanvas offcanvas-end  " tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">TopBurger</h5>
+                        <button type="button" class="btn-close btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body justify-content-lg-around  align-items-lg-end">
+                        <div class="d-lg-flex me-3 ">
+
+                            <ul class="navbar-itens navbar-nav  align-items-lg-end flex-grow-1 pe-3">
+
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="admin" asp-controller="Admin" asp-action="Index">Home</a>
+                                </li>
+
+                                <li class="ps-1">
+                                    <a class="nav-link" asp-area="admin" asp-controller="AdminLanches" asp-action="Index">Produtos</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="admin" asp-controller="AdminCategorias" asp-action="Index">Categorias</a>
+                                </li>
+
+                                <li class="nav-item ">
+                                    <a class="nav-link" asp-area="admin" asp-controller="AdminPedidos" asp-action="Index">Pedidos</a>
+                                </li>
+
+                            </ul>
+
+
+                        </div>                     
+
+                        @await Html.PartialAsync("_loginPartial")
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container-fluid pe-1 ps-1">
+        <main role="main" class="m-0">
+            @RenderBody()
+
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - TopBurgers - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

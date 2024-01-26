@@ -42,7 +42,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                                 </li>
-                                
+
                                 <li class="ps-1">
                                     @await Component.InvokeAsync("CategoriaMenu")
                                 </li>
@@ -54,7 +54,12 @@
                                 <li class="nav-item ">
                                     <a class="nav-link" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a>
                                 </li>
-
+                                <li>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <a class="nav-link" asp-area="admin" asp-controller="Admin" asp-action="Index">Administrador</a>
+                                    }
+                                </li>
                             </ul>
 
                             <form class="d-flex mt-3" role="search" asp-controller="Lanche" asp-action="Search" method="get">
@@ -70,6 +75,7 @@
 
                         @await Html.PartialAsync("_loginPartial")
 
+                    </div>
                 </div>
             </div>
         </nav>

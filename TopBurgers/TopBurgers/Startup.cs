@@ -6,10 +6,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 using TopBurgers.Context;
 using TopBurgers.Models;
 using TopBurgers.Repositories;
 using TopBurgers.Repositories.Interfaces;
+using TopBurgers.Services;
 
 namespace TopBurgers
 {
@@ -35,6 +37,15 @@ namespace TopBurgers
             services.AddTransient<ILancheRepository, LancheRepository>();
             services.AddTransient<ICategoriaRepository, CategoriaRepository>();
             services.AddTransient<IPedidoRepository, PedidoRepository>();
+            services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("Admin", politica =>
+                {
+                    politica.RequireRole("Admin");
+                });
+            });
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
@@ -46,8 +57,15 @@ namespace TopBurgers
             services.AddSession();
         }
 
+        private void SeedUserRoleInitial()
+        {
+            throw new NotImplementedException();
+        }
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app,
+            IWebHostEnvironment env,
+            ISeedUserRoleInitial seedUserRoleInitial)
         {
             if (env.IsDevelopment())
             {
@@ -63,6 +81,9 @@ namespace TopBurgers
             app.UseStaticFiles();
 
             app.UseRouting();
+            seedUserRoleInitial.SeedRoles();
+            seedUserRoleInitial.SeedUsers();
+
             app.UseSession();
 
             app.UseAuthentication();
@@ -70,6 +91,9 @@ namespace TopBurgers
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "areas",
+                    pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
 
                 endpoints.MapControllerRoute(
                     name: "categoriaFiltro",
@@ -80,6 +104,7 @@ namespace TopBurgers
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
             });
 
         }
