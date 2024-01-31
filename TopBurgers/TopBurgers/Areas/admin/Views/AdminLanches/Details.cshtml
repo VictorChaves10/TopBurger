@@ -1,0 +1,77 @@
+﻿@model TopBurgers.Models.Lanche
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<section class="container py-4">
+   
+
+    <div>
+        <header class="text-center">
+            <h1>Detalhes do lanche</h1>
+            <hr />
+        </header>
+        <dl class="row ">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Nome):
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.DescricaoCurta):
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.DescricaoCurta)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.DescricaoDetalhada):
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.DescricaoDetalhada)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Preco):
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Preco)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.ImagemUrl)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.ImagemUrl)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.ImagemThumbnailUrl)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.ImagemThumbnailUrl)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.IsLanchePreferido)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.IsLanchePreferido)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.EmEstoque)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.EmEstoque)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Categoria)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Categoria.CategoriaNome)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.LancheId">Editar</a> |
+        <a class="btn btn-outline-primary" asp-action="Index">Voltar para lista</a>
+    </div>
+
+</section>

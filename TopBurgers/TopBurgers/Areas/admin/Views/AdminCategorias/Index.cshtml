@@ -4,38 +4,48 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<section class="container py-4">
 
-<p>
-    <a asp-action="Create">Criar nova categoria</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CategoriaNome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoriaNome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.CategoriaId">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.CategoriaId">Detalhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.CategoriaId">Deletar</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <header>
+
+        <h1>Categorias</h1>
+        <a asp-action="Create" class="btn btn-primary">Criar nova categoria</a>
+
+    </header>
+
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CategoriaNome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Descricao)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <strong> @Html.DisplayFor(modelItem => item.CategoriaNome) </strong>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descricao)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.CategoriaId">Editar</a> |
+                            <a asp-action="Details" asp-route-id="@item.CategoriaId">Detalhes</a> |
+                            <a asp-action="Delete" asp-route-id="@item.CategoriaId">Deletar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+   
+</section>
+

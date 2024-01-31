@@ -29,7 +29,7 @@ namespace TopBurgers.Models
         public string Complemento { get; set; }
 
         [Required(ErrorMessage ="Informe o seu CEP")]
-        [Display(Name = "Estado")]
+        [Display(Name = "CEP")]
         [StringLength(15, MinimumLength = 8)]
         public string Cep { get; set; }
 
@@ -69,7 +69,7 @@ namespace TopBurgers.Models
         [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
 
         public DateTime PedidoEnviado { get; set; }
-        [Display(Name = "Data Envio Pedido")]
+        [Display(Name = "Data Entrega Pedido")]
         [DataType(DataType.Text)]
         [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
 
