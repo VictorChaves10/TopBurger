@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
+using ReflectionIT.Mvc.Paging;
 using TopBurgers.Context;
 using TopBurgers.Models;
 
 namespace TopBurgers.Areas.admin.Controllers
 {
     [Area("admin")]
+    [Authorize("Admin")]
     public class AdminLanchesController : Controller
     {
         private readonly AppDbContext _context;
@@ -21,10 +25,25 @@ namespace TopBurgers.Areas.admin.Controllers
         }
 
         // GET: admin/AdminLanches
-        public async Task<IActionResult> Index()
+        //public async Task<IActionResult> Index()
+        //{
+        //    var appDbContext = _context.Lanches.Include(l => l.Categoria);
+        //    return View(await appDbContext.ToListAsync());
+        //}
+
+        public async Task<IActionResult> Index(string filter, int pageindex = 1, string sort = "Nome")
         {
-            var appDbContext = _context.Lanches.Include(l => l.Categoria);
-            return View(await appDbContext.ToListAsync());
+            var resultado = _context.Lanches.Include(l => l.Categoria).AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(filter))
+            {
+                resultado = resultado.Where(p => p.Nome.Contains(filter));
+            }
+
+            var model = await PagingList.CreateAsync(resultado, 5, pageindex, sort, "Nome");
+            model.RouteValue = new RouteValueDictionary { { "filter", filter } };
+            return View(model);
+
         }
 
         // GET: admin/AdminLanches/Details/5
@@ -156,14 +175,14 @@ namespace TopBurgers.Areas.admin.Controllers
             {
                 _context.Lanches.Remove(lanche);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool LancheExists(int id)
         {
-          return _context.Lanches.Any(e => e.LancheId == id);
+            return _context.Lanches.Any(e => e.LancheId == id);
         }
     }
 }

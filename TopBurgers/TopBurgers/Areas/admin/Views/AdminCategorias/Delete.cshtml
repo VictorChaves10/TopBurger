@@ -1,13 +1,19 @@
 ﻿@model TopBurgers.Models.Categoria
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Categoria - Deletar";
 }
 
-<h1>Deletar Categoria</h1>
+<section>
 
-<h3>Você tem certeza que deseja deletar uma categoria?</h3>
+</section>
+<header class="text-center">
+    <h1>Deletar Categoria</h1>
+    <h3>Você tem certeza que deseja deletar uma categoria?</h3>
+</header>
+
 <div>
+
     <h4>Categoria</h4>
     <hr />
     <dl class="row">
@@ -28,6 +34,7 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="CategoriaId" />
         <input type="submit" value="Deletar" class="btn btn-danger" />
-        <a asp-action="Index" class="btn btn-primary">Voltar a lista</a>
+        <a asp-action="Index" class="btn btn-outline-primary">Voltar a lista</a>
     </form>
+
 </div>

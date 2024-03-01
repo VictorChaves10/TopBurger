@@ -67,12 +67,12 @@ namespace TopBurgers.Models
         [Display(Name = "Data Envio Pedido")]
         [DataType(DataType.Text)]
         [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
-
         public DateTime PedidoEnviado { get; set; }
+
+
         [Display(Name = "Data Entrega Pedido")]
         [DataType(DataType.Text)]
         [DisplayFormat(DataFormatString = "{0: dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
-
         public DateTime? PedidoEntregueEm { get; set; }
 
         public List<PedidoDetalhe> PedidosItens { get; set; }

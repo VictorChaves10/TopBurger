@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ReflectionIT.Mvc.Paging;
 using System;
 using TopBurgers.Context;
 using TopBurgers.Models;
@@ -39,6 +40,13 @@ namespace TopBurgers
             services.AddTransient<IPedidoRepository, PedidoRepository>();
             services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 
+           
+
+            services.AddPaging(options => {
+                options.ViewName = "Bootstrap4";
+                options.PageParameterName = "pageindex";
+            });
+
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("Admin", politica =>
@@ -46,7 +54,6 @@ namespace TopBurgers
                     politica.RequireRole("Admin");
                 });
             });
-
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddControllersWithViews();

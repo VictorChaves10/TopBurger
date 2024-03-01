@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TopBurgers.Models.Pedido>
+﻿@model ReflectionIT.Mvc.Paging.PagingList<TopBurgers.Models.Pedido>
 
 @{
     ViewData["Title"] = "Pedido";
@@ -9,6 +9,22 @@
     <header class="text-center">
         <h1>Pedidos</h1>
     </header>
+
+    <div>
+        <form method="get" class=" form-inline">
+            <div class="row p-3  gap-1">
+                <input name="filter" class="form-control col" value="@Model.RouteValue["Filter"]" />
+                <button type="submit" class="btn btn-info col-4 p-1">Procurar</button>
+            </div>
+       
+        </form>
+    </div>
+
+    <div class="mt-2">
+        <vc:pager paging-list="@Model"></vc:pager>
+    </div>
+    <p>Total de pedidos: @Model.TotalRecordCount</p>
+
 
     <table class="table">
         <thead>
@@ -83,5 +99,6 @@
             }
         </tbody>
     </table>
+   
 </section>
 

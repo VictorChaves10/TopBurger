@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
+using ReflectionIT.Mvc.Paging;
 using TopBurgers.Context;
 using TopBurgers.Models;
 
 namespace TopBurgers.Areas.admin.Controllers
 {
     [Area("admin")]
+    [Authorize("Admin")]
     public class AdminPedidosController : Controller
     {
         private readonly AppDbContext _context;
@@ -20,11 +24,31 @@ namespace TopBurgers.Areas.admin.Controllers
             _context = context;
         }
 
-        // GET: admin/AdminPedidos
-        public async Task<IActionResult> Index()
+        //// GET: admin/AdminPedidos
+        //public async Task<IActionResult> Index()
+        //{
+        //      return View(await _context.Pedidos.ToListAsync());
+        //}
+
+        public async Task<IActionResult> Index(string filter, int pageindex = 1, string sort = "Nome")
         {
-              return View(await _context.Pedidos.ToListAsync());
+
+            var resultado = _context.Pedidos.AsNoTracking()
+                                        .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(filter))
+            {
+                resultado = resultado.Where(p => p.Nome.Contains(filter));
+            }
+
+            var model = await PagingList.CreateAsync(resultado, 5, pageindex, sort, "Nome");
+
+            model.RouteValue = new RouteValueDictionary { { "filter", filter } };
+
+            return View(model);
+
         }
+
 
         // GET: admin/AdminPedidos/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -149,14 +173,14 @@ namespace TopBurgers.Areas.admin.Controllers
             {
                 _context.Pedidos.Remove(pedido);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool PedidoExists(int id)
         {
-          return _context.Pedidos.Any(e => e.PedidoId == id);
+            return _context.Pedidos.Any(e => e.PedidoId == id);
         }
     }
 }

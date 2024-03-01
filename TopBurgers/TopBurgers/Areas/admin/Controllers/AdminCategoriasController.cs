@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using TopBurgers.Models;
 namespace TopBurgers.Areas.admin.Controllers
 {
     [Area("admin")]
+    [Authorize("Admin")]
     public class AdminCategoriasController : Controller
     {
         private readonly AppDbContext _context;
@@ -52,7 +54,6 @@ namespace TopBurgers.Areas.admin.Controllers
 
        
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CategoriaId,CategoriaNome,Descricao")] Categoria categoria)
         {
             if (ModelState.IsValid)
