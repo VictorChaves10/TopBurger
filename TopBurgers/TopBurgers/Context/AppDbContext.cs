@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TopBurgers.Models;
 
+
 namespace TopBurgers.Context
 {
     public class AppDbContext : IdentityDbContext<IdentityUser>

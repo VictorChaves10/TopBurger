@@ -1,0 +1,101 @@
+﻿@model IEnumerable<TopBurgers.Models.Pedido>
+
+<h2>Pedidos Por Periodo</h2>
+
+
+<nav class="navbar navbar-dark">
+    <div class="container-fluid">
+        <form class="">
+            <div class="">
+                <label for="minDate">Data Inicial</label>
+                <input type="date" class="form-control" name="minDate" value="@ViewData["minDate"]"/>
+            </div>
+            <div class="">
+                <label for="maxDate">Data final</label>
+                <input type="date" class="form-control" name="maxDate" value="@ViewData["maxDate"]" />
+            </div>
+            <button type="submit" class="btn btn-success">Filtrar</button>
+        </form>
+    </div>
+</nav>
+
+<div class="">
+    <div>
+        <h3>Total de Pedidos = @Model.Count()</h3>
+        <h3>Total de lanches nos Pedidos = @Model.Sum(obj => obj.TotalItensPedido).ToString()</h3>
+        <h3>Valor Total dos Pedidos = @Model.Sum(obj => obj.PedidoTotal).ToString("c")</h3>
+    </div>
+
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sobrenome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Endereco)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Complemento)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cep)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cidade)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefone)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PedidoEnviado)
+                    </th>
+          
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Sobrenome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Endereco)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Complemento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cep)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cidade)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefone)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PedidoEnviado)
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

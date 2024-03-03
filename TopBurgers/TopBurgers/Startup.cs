@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ReflectionIT.Mvc.Paging;
 using System;
+using TopBurgers.Areas.admin.Servicos;
 using TopBurgers.Context;
 using TopBurgers.Models;
 using TopBurgers.Repositories;
@@ -39,6 +40,7 @@ namespace TopBurgers
             services.AddTransient<ICategoriaRepository, CategoriaRepository>();
             services.AddTransient<IPedidoRepository, PedidoRepository>();
             services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
+            services.AddScoped<RelatorioVendasService>();
 
            
 

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TopBurgers.Models.Lanche>
+﻿@model ReflectionIT.Mvc.Paging.PagingList<TopBurgers.Models.Lanche>
 
 @{
     ViewData["Title"] = "Index";
@@ -6,66 +6,80 @@
 <section class="m-1 p-2">
 
 
-<h1 class="text-center m-5">Lanches</h1>
+    <h1 class="text-center m-5">Lanches</h1>
 
-<div class="m-3">
-    <a asp-action="Create" class="btn btn-primary">Criar novo lanche</a>
-</div>
+    <div class="m-3">
+        <a asp-action="Create" class="btn btn-primary">Criar novo lanche</a>
+    </div>
 
+    <div>
+        <form method="get" class=" form-inline">
+            <div class="row p-3  gap-1">
+                <input name="filter" class="form-control col" value="@Model.RouteValue["Filter"]" />
+                <button type="submit" class="btn btn-info col-4 p-1">Procurar</button>
+            </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Lanche
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DescricaoDetalhada)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Preco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsLanchePreferido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EmEstoque)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+        </form>
+    </div>
+
+    <div class="mt-2">
+        <vc:pager paging-list="@Model"></vc:pager>
+    </div>
+    <p>Total de produtos: @Model.TotalRecordCount</p>
+
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Categoria.CategoriaNome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DescricaoDetalhada)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Preco)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsLanchePreferido)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EmEstoque)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.LancheId">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.LancheId">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.LancheId">Deletar</a>
-                </td>
+                <th>
+                    Lanche
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Categoria)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DescricaoDetalhada)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Preco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsLanchePreferido)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmEstoque)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Categoria.CategoriaNome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DescricaoDetalhada)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Preco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsLanchePreferido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmEstoque)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.LancheId">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.LancheId">Detalhes</a> |
+                        <a asp-action="Delete" asp-route-id="@item.LancheId">Deletar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </section>

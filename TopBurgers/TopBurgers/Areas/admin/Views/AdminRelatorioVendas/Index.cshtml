@@ -1,0 +1,32 @@
+﻿<div class="row">
+    <div class="col-md-6">
+        <form asp-action="RelatorioVendasSimples" class="">
+            <fieldset>
+                <legend>
+                    <b> Relatório por Período</b>
+                </legend>
+                <div class="">
+                    <label for="minDate" class="col-lg-6">Data Inicial</label>
+                    <div class="col-lg-10">
+                        <input type="date" name="minDate" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="">
+                    <label for="maxDate" class="col-lg-6">Data Final</label>
+                    <div class="col-lg-10">
+                        <input type="date" name="maxDate" class="form-control" />
+                    </div>
+                </div>
+
+                <div>
+                    <div class="col-lg-10 offset-2">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+    </div>
+</div>

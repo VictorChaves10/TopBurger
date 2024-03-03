@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using ReflectionIT.Mvc.Paging;
 using TopBurgers.Context;
 using TopBurgers.Models;
+using TopBurgers.ViewModels;
 
 namespace TopBurgers.Areas.admin.Controllers
 {
@@ -29,6 +30,26 @@ namespace TopBurgers.Areas.admin.Controllers
         //{
         //      return View(await _context.Pedidos.ToListAsync());
         //}
+
+        public IActionResult PedidoLanches(int? id)
+        {
+            var pedido = _context.Pedidos
+                            .Include(pd => pd.PedidosItens)
+                            .ThenInclude(l => l.Lanche)
+                            .FirstOrDefault(p => p.PedidoId == id);
+            if(pedido == null)
+            {
+                Response.StatusCode = 404;
+                return View("PedidoNotFound", id.Value);
+            }
+
+            PedidoLancheViewModel pedidoLanches = new PedidoLancheViewModel()
+            {
+                Pedido = pedido,
+                PedidoDetalhes = pedido.PedidosItens
+            };
+            return View(pedidoLanches);
+        }
 
         public async Task<IActionResult> Index(string filter, int pageindex = 1, string sort = "Nome")
         {
@@ -72,22 +93,6 @@ namespace TopBurgers.Areas.admin.Controllers
         public IActionResult Create()
         {
             return View();
-        }
-
-        // POST: admin/AdminPedidos/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PedidoId,Nome,Sobrenome,Endereco,Complemento,Cep,Estado,Cidade,Telefone,Email,PedidoEnviado,PedidoEntregueEm")] Pedido pedido)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(pedido);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(pedido);
         }
 
         // GET: admin/AdminPedidos/Edit/5
